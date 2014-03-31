@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<% @post_attachments.each do |p| %>
+  <%= image_tag p.avatar_url %>
+
+<% end %>
+
+<%= link_to 'Edit This Post', edit_post_path(@post) %> |
+<%= link_to 'Back To Posts Index', posts_path %>
